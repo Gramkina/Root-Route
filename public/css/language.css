@@ -1,0 +1,52 @@
+#languages:checked ~ .choose-language > .option-language{
+    visibility: visible;
+}
+.option-language{
+    visibility: hidden;
+    position: absolute;
+    width: 80px;
+    display: block;
+    background-color: #D4D4D4;
+}
+#languages:checked ~ .choose-language{
+    background-color: #D4D4D4;
+}
+#languages:checked ~ .choose-language > label > img{
+    display: none;
+}
+.select-language{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 5px 0 5px;
+    cursor: pointer;
+}
+.choose-language{
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    width: 80px;
+    position: fixed;
+    text-align: center;
+}
+.choose-language > label{
+    width: 100%;
+}
+.option-language-element{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option-language-element:hover{
+    background-color: #C4C4C4;
+}
+.option-language-element > div{
+    height: 30px;
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,0 +1,36 @@
+.context_menu{
+    position: absolute;
+    display: none;
+    color: #E9E9E9 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    background-color: #383838;
+    border-radius: 4px;
+    padding: 5px 0px;
+    border: 1px solid #383838;
+}
+.context_menu_element{
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+.context_menu_element > img{
+    margin-right: 5px;
+}
+.context_menu_element:hover{
+    background-color: #E9E9E9;
+    color: #383838;
+}
+.context_menu_element:hover .context_menu_icon_select{
+    display: block;
+}
+.context_menu_element:hover .context_menu_icon{
+    display: none;
+}
+.context_menu_icon_select{
+    display: none;
+}

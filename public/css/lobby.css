@@ -1,0 +1,58 @@
+body{
+    all: unset;
+    background: url('/img/background.svg') no-repeat;
+    background-size: 100%;
+}
+.block-login{
+    width: 30%;
+    margin-left: 60%;
+    background-color: #DDDDDD;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 36px;
+    color: #383838;
+    font-weight: bold;
+    align-items: center;
+    font-family: 'Be Vietnam', sans-serif;
+}
+.logo-login{
+    height: 16%;
+    margin-top: 16%;
+}
+.language-login{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.input-login{
+    width: 78%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 2px solid #245B9C;
+    background-color: #EDE9E9;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    height: 4vh;
+}
+.btn-login{
+    margin-top: 8%;
+    width: 78%;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.error_block{
+    font-weight: normal;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #850606;
+}
+.error_block > div{
+    margin: 10px 0;
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    src: url('/fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url('/fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Be Vietnam';
+    font-weight: bold;
+    src: url('/fonts/BeVietnam/BeVietnam-Bold.ttf');
+}

@@ -1,0 +1,116 @@
+.file_search{
+    height: 100%;
+    width: 48%;
+    background: url("/img/search_icon.svg") no-repeat 99%;
+}
+.file_search:focus{
+    background-image: none;
+}
+.actions_files{
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.action_files_btn{
+    background-color: #FBFBFB;
+    border: 1px solid #245B9C;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    color: #245B9C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+}
+.action_files_btn:active{
+    background-color: #f0f0f0;
+}
+.action_files_btn img{
+    margin-right: 5px;
+}
+table{
+    border: 1px solid #245B9C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #383838;
+    width: 100%;
+    margin-top: 15px;
+    background: #F0F0F0;
+    border-spacing: unset;
+}
+.blk_scr_dlg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #383838aa;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.crt_folder_dialog{
+    border: 2px solid #245B9C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #383838;
+    background-color: #F1F1F1;
+    padding: 20px;
+}
+.crt_folder_dialog input{
+    margin-top: 15px;
+    height: 4vh;
+    width: 20vw;
+}
+.crt_folder_dialog form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dlg_title{
+    display: flex;
+    justify-content: space-between;
+}
+.dlg_title img{
+    cursor: pointer;
+}
+.type_file_img{
+    margin-right: 10px;
+}
+tr{
+    height: 3.5vh;
+}
+td a{
+    display: block;
+    align-items: center;
+    color: #245B9C;
+    cursor: pointer;
+}
+.options_file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options_file img{
+    cursor: pointer;
+}
+.crt_folder_err{
+    color: #850606;
+}
+.crt_folder_err{
+    margin-top: 10px;
+}
+.folderName{
+    display: flex;
+    align-items: center;
+}
+.pathFolder{
+    color: #383838;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+}
