@@ -1,0 +1,27 @@
+.dialog-main-block{
+    border: 2px solid #245B9C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #383838;
+    background-color: #F1F1F1;
+    padding: 20px;
+}
+.dialog_title{
+    display: flex;
+    justify-content: space-between;
+}
+.dialog_title img{
+    cursor: pointer;
+}
+.dialog_background{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #383838aa;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}

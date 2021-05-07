@@ -1,17 +1,18 @@
-.file_search{
-    height: 100%;
-    width: 48%;
-    background: url("/img/search_icon.svg") no-repeat 99%;
+.current_version{
+    color: #383838;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
 }
-.file_search:focus{
-    background-image: none;
+.this_version{
+    color: #245B9C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: 10px;
 }
-.actions_files{
-    height: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-.action_files_btn{
+.action_file_btn{
     background-color: #FBFBFB;
     border: 1px solid #245B9C;
     box-sizing: border-box;
@@ -23,12 +24,26 @@
     font-size: 17px;
     cursor: pointer;
     user-select: none;
+    margin-left: 15px;
 }
-.action_files_btn:active{
+.actions_file{
+    height: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+.action_file_btn:active{
     background-color: #f0f0f0;
 }
-.action_files_btn img{
+.action_file_btn img{
     margin-right: 5px;
+}
+.info_file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.editor-container{
+    margin-top: 15px;
 }
 table{
     border: 1px solid #245B9C;
@@ -39,19 +54,6 @@ table{
     margin-top: 15px;
     background: #F0F0F0;
     border-spacing: unset;
-}
-#crt_folder_dlg input, #upload_file_dlg input{
-    margin-top: 15px;
-    height: 4vh;
-    width: 20vw;
-}
-#crt_folder_dlg form, #upload_file_dlg form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.type_file_img{
-    margin-right: 10px;
 }
 tr{
     height: 3.5vh;
@@ -70,20 +72,22 @@ td a{
 .options_file img{
     cursor: pointer;
 }
+#select-ver-dlg{
+    width: 60%;
+}
 .add_version_err{
     color: #850606;
     margin-top: 10px;
 }
-.folderName{
-    display: flex;
-    align-items: center;
+#add_version_dlg input{
+    margin-top: 15px;
+    height: 4vh;
+    width: 20vw;
 }
-.pathFolder{
-    color: #383838;
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 10px;
+#add_version_dlg form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .select_file_block{
     display: flex;
@@ -95,7 +99,4 @@ td a{
 .select_file_btn{
     width: 50%;
     height: 100%;
-}
-#file_name{
-    margin-left: 10px;
 }

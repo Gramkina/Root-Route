@@ -11,12 +11,12 @@ class LoginController extends Controller{
         $data = $request->all();
         try {
             if (Auth::attempt(['login' => $data['login'], 'password' => $data['password']]))
-                return ['status' => 1, 'url' => route('navigation.home')];
+                return ['status' => 1, 'url' => route('home')];
             else
                 return ['status' => 0, 'errors' => ['Неправильный логин и/или пароль']];
         }
         catch(\Exception $exception) {
-            return ['status' => 0, 'errors' => ['Ошибка на сервере']];
+            return $exception/*['status' => 0, 'errors' => ['Ошибка на сервере']]*/;
         }
     }
 

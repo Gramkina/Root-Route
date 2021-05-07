@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('css/shared.css')}}">
     @stack('script')
     @stack('css')
+    @stack('meta')
     <title>@yield('title')</title>
 </head>
 <body>

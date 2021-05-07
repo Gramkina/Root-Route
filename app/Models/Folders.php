@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+ * @property int id
+ * @property string storage
  * @property string name
  * @property int creator
  * @property string path
@@ -17,10 +19,12 @@ class Folders extends Model{
 
     protected $table = 'folders';
 
-    public function add($name, $path){
+    public function add($storage, $name, $path, $useUser = 1){
         $folder = new Folders();
+        $folder->storage = $storage;
         $folder->name = $name;
-        $folder->userData()->associate(UserData::getUserDataCurrentUser());
+        if($useUser == 1)
+            $folder->userData()->associate(UserData::getUserDataCurrentUser());
         $folder->path = $path;
         $folder->save();
     }
@@ -29,8 +33,8 @@ class Folders extends Model{
         return $this->belongsTo(UserData::class, 'creator', 'id');
     }
 
-    public static function isFolderExists($path, $folder = null){
-        return Folders::where(($folder ? ['path' => $path, 'name' => $folder] : ['path' => $path]))->exists();
+    public static function isFolderExists($storage, $path, $folder = null){
+        return Folders::where(($folder ? ['storage' => $storage, 'path' => $path, 'name' => $folder] : ['storage' => $storage, 'path' => $path]))->exists();
     }
 
     public function getFiles(){

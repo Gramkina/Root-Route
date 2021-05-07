@@ -39,9 +39,17 @@ Route::resource('accounts', AccountsController::class)->except(['index']);
 
 /* Storage */
 Route::middleware(['auth', 'role:user'])->group(function(){
-    Route::post('/createFolder', [StorageController::class, 'createFolder']);
-    Route::get('/files', [StorageController::class, 'index'])->name('files');
-    Route::post('/uploadFile', [StorageController::class, 'uploadFile']);
+    Route::post('/createFolder', \App\Http\Controllers\Storage\CreateFolderController::class);
+    Route::get('/shared-storage', \App\Http\Controllers\Storage\IndexController::class)->name('shared_storage');
+    Route::get('/personal-storage', \App\Http\Controllers\Storage\IndexController::class)->name('personal_storage');
+    Route::post('/uploadFile', \App\Http\Controllers\Storage\UploadFileController::class);
+    Route::get('/download-file/{file:hash_name}', \App\Http\Controllers\Storage\DownloadFileController::class)->name('download_file');
+    Route::get('/edit-file/{file:hash_name}', \App\Http\Controllers\Storage\IndexEditFileController::class)->name('edit_file');
+    Route::get('/file/{file:hash_name}', \App\Http\Controllers\Storage\FileIndexController::class)->name('file');
+    Route::post('/addFileVersion', \App\Http\Controllers\Storage\AddFileVersionController::class);
+
+    Route::post('/save-edit-file', \App\Http\Controllers\Storage\SaveChangeFileController::class);
+    Route::get('/comments/{file:hash_name}', \App\Http\Controllers\Storage\CommentsIndexController::class)->name('comments');
 });
 
 
@@ -51,9 +59,9 @@ Route::name('auth.')->group(function(){
 });
 
 
-Route::name('navigation.')->group(function(){
-    Route::view('/', 'login')->name('login')->middleware('guest');
-    Route::view('/home', 'home')->name('home')->middleware('auth');
-});
+
+Route::view('/', 'login')->name('login')->middleware('guest');
+Route::view('/home', 'home')->name('home')->middleware('auth');
+
 
 Route::get('/setLanguage', [\App\Http\Controllers\LanguageController::class, 'setLanguage']);

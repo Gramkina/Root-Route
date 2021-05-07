@@ -9,6 +9,7 @@ class CreateStorage extends Migration{
     public function up(){
         Schema::create('folders', function (Blueprint $table) {
             $table->id();
+            $table->string('storage');
             $table->string('name');
             $table->foreignId('creator')->nullable()->constrained('user_data');
             $table->string('path');
@@ -17,9 +18,12 @@ class CreateStorage extends Migration{
 
         Schema::create('files', function (Blueprint $table){
             $table->id();
+            $table->string('storage');
             $table->string('name');
-            $table->string('storage_name');
-            $table->float('size');
+            $table->string('hash_name');
+            $table->string('version_name');
+            $table->string('version_status');
+            $table->integer('size');
             $table->foreignId('creator')->constrained('user_data');
             $table->foreignId('folder')->constrained('folders');
             $table->timestamps();

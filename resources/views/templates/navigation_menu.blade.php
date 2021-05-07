@@ -8,7 +8,7 @@
 </div>
 
 <?php
-    $navigationMenu = json_decode(\Illuminate\Support\Facades\Storage::disk('local')->get(\Illuminate\Support\Facades\Auth::user()->role === 'admin' ? 'navigation_menu.json' : 'navigation_menu.json'), true);
+    $navigationMenu = json_decode(\Illuminate\Support\Facades\Storage::disk('local')->get(\Illuminate\Support\Facades\Auth::user()->role === 'admin' ? 'navigation_menu.json' : 'navigation_menu_user.json'), true);
     $currentUri = \Illuminate\Support\Facades\Route::getCurrentRoute()->getName();
 ?>
 

@@ -45,7 +45,7 @@ class UserData extends Model{
     }
 
     public function authData(){
-        return $this->belongsTo('App\Models\AuthData', 'user','id');
+        return $this->belongsTo(AuthData::class, 'user','id');
     }
 
     public static function getUserDataCurrentUser(){

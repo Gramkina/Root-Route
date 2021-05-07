@@ -1,0 +1,18 @@
+.save_btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px 25px;
+}
+.info_edit_file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.version_name{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}

@@ -21,6 +21,8 @@ input[type=text], input[type=email], input[type=password]{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 17px;
+    cursor: pointer;
+    user-select: none;
 }
 .green_button:active{
     background-color: #4cb86a;
@@ -59,4 +61,18 @@ input[type=text], input[type=email], input[type=password]{
 }
 .odd_table_line{
     background-color: #E9E9E9;
+}
+.blue_button{
+    background-color: #4A90BE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F3F3F3;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    user-select: none;
+}
+.blue_button:active{
+    background-color: #5B98C0;
 }
