@@ -98,4 +98,8 @@ class Files extends Model{
         return $this->belongsTo(Folders::class, 'folder', 'id');
     }
 
+    public function getComments(){
+        return $this->hasMany(Comment::class, 'file', 'id');
+    }
+
 }

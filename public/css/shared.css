@@ -13,6 +13,10 @@ input[type=text], input[type=email], input[type=password]{
     border: 1px solid #245B9C;
     background-color: #FBFBFB;
 }
+textarea:focus{
+    outline-offset: unset;
+    outline: none;
+}
 .green_button, .red_button{
     background-color: #46AB62;
     border-radius: 0px;

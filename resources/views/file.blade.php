@@ -27,7 +27,7 @@
             <div id="select-ver-btn" class="action_file_btn"><img src="{{asset('img/files/file.svg')}}" alt="">Выбрать версию файла</div>
             <div id="add_ver_btn" class="action_file_btn"><img src="{{asset('img/files/upload.svg')}}" alt="">Загрузить новую версию</div>
             <a href="{{route('edit_file', ['file' => $file->hash_name])}}" class="action_file_btn"><img src="{{asset('img/files/edit_file.svg')}}" alt="">Редактировать</a>
-            <div class="action_file_btn"><img src="{{asset('img/files/comment.svg')}}" alt="">Комментировать</div>
+            <a href="{{route('comments', ['file' => $file->hash_name])}}" class="action_file_btn"><img src="{{asset('img/files/comment.svg')}}" alt="">Комментировать</a>
         </div>
     </div>
     {{--Select Version File Dialog--}}

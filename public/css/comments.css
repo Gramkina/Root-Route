@@ -1,0 +1,52 @@
+textarea{
+    width: 100%;
+    height: 9vh;
+    resize: none;
+    box-sizing: border-box;
+    padding: 7px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FBFBFB;
+    color: #383838;
+}
+#your_comment_form input{
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 8px 35px;
+}
+.count_comments{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+#your_comment_form{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.comment_main_block{
+    width: 100%;
+    background-color: #ECECEC;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    margin-top: 10px;
+    /*border: 1px solid #245B9C;*/
+}
+.comment_main_content{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #383838;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.comment_answer_btn{
+    color: #245B9C;
+    font-size: 14px;
+    cursor: pointer;
+}
+.comment_text, .comment_answer_btn{
+    margin-top: 5px;
+}

@@ -50,6 +50,7 @@ Route::middleware(['auth', 'role:user'])->group(function(){
 
     Route::post('/save-edit-file', \App\Http\Controllers\Storage\SaveChangeFileController::class);
     Route::get('/comments/{file:hash_name}', \App\Http\Controllers\Storage\CommentsIndexController::class)->name('comments');
+    Route::post('/add-comment', \App\Http\Controllers\Storage\AddCommentController::class);
 });
 
 
