@@ -3,11 +3,8 @@
 use App\Http\Controllers\AccountsController;
 use App\Http\Controllers\InviteController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\StorageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\UserControllerOld;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,10 +44,14 @@ Route::middleware(['auth', 'role:user'])->group(function(){
     Route::get('/edit-file/{file:hash_name}', \App\Http\Controllers\Storage\IndexEditFileController::class)->name('edit_file');
     Route::get('/file/{file:hash_name}', \App\Http\Controllers\Storage\FileIndexController::class)->name('file');
     Route::post('/addFileVersion', \App\Http\Controllers\Storage\AddFileVersionController::class);
-
     Route::post('/save-edit-file', \App\Http\Controllers\Storage\SaveChangeFileController::class);
     Route::get('/comments/{file:hash_name}', \App\Http\Controllers\Storage\CommentsIndexController::class)->name('comments');
     Route::post('/add-comment', \App\Http\Controllers\Storage\AddCommentController::class);
+    Route::get('/tasks/my', [App\Http\Controllers\Task\TaskIndexController::class, 'indexMyTask'])->name('tasks.my');
+    Route::get('/task/add', [\App\Http\Controllers\Task\TaskAddController::class, 'index'])->name('task.add');
+    Route::post('/task/add', [\App\Http\Controllers\Task\TaskAddController::class, 'addTask']);
+    Route::get('/tasks/to-me', [App\Http\Controllers\Task\TaskIndexController::class, 'indexToMeTask'])->name('tasks.tome');
+    Route::get('/task/{task}', App\Http\Controllers\Task\TaskController::class)->name('task.task');
 });
 
 

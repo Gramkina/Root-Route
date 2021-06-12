@@ -9,4 +9,6 @@ return [
     'shared_storage' => 'Shared storage',
     'personal_storage' => 'Personal storage',
     'storage' => 'Storage',
+    'global_tasks' => 'Tasks',
+    'tasks' => 'Tasks list',
 ];

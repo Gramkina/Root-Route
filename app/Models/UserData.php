@@ -48,6 +48,9 @@ class UserData extends Model{
         return $this->belongsTo(AuthData::class, 'user','id');
     }
 
+    /**
+     * @return UserData
+     */
     public static function getUserDataCurrentUser(){
         if(Auth::user()->role === 'user')
             return AuthData::where(['id' => Auth::user()->id])->firstOrFail()->userData()->sole();
